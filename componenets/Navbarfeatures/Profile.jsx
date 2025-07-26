@@ -774,7 +774,7 @@ const hardPercentage = totalSolved ? (hardSolved / totalSolved) * 100 : 0;
             <div className="flex flex-col items-center">
               <div className="relative">
                 <img
-                  src="/componenets/hacker.png"
+                  src="/hacker.png"
                   alt="Profile"
                   className="w-28 h-28 rounded-full border-4 border-amber-400 object-cover"
                 />
