@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> CODE LIKHO</title>
+    <title>Code Likho</title>
+    <style>
+      .code-symbol {
+        font-size: 30px;
+        fill: #10B981;
+        font-family: 'Courier New', monospace;
+      }
+      .text-c { fill: #EF4444; }
+      .text-o { fill: #F59E0B; }
+      .text-d { fill: #10B981; }
+      .text-e { fill: #3B82F6; }
+      .text-l { fill: #6366F1; }
+      .text-i { fill: #8B5CF6; }
+      .text-k { fill: #EC4899; }
+      .text-h { fill: #F43F5E; }
+      .text-o2 { fill: #22D3EE; }
+      .word {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      #logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    </style>
   </head>
   <body>
+    <div id="logo">
+      <svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="40" class="code-symbol">&lt;/&gt;</text>
+        <text x="55" y="40" class="word">
+          <tspan class="text-c">C</tspan>
+          <tspan class="text-o">o</tspan>
+          <tspan class="text-d">d</tspan>
+          <tspan class="text-e">e</tspan>
+          <tspan> </tspan>
+          <tspan class="text-l">L</tspan>
+          <tspan class="text-i">i</tspan>
+          <tspan class="text-k">k</tspan>
+          <tspan class="text-h">h</tspan>
+          <tspan class="text-o2">o</tspan>
+        </text>
+      </svg>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
