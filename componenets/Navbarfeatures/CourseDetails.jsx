@@ -21,7 +21,7 @@ function CourseDetails() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
   const { user } = useSelector((state) => state.auth);
-  const viterazorpaykeyid = import.meta.env.VITE_RAZORPAY_KEY_ID;
+  const viterazorpaykeyid = import.meta.env.VITE_RAZORPAY_KEY_ID.trim();
 
   useEffect(() => {
     fetchData();
