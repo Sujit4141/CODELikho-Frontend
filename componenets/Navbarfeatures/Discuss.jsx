@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../Navbar";
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const backendUrl = 'https://codelikho.onrender.com';
 import { io } from "socket.io-client";
 import Footer from "../../src/pages/Footer";
 
