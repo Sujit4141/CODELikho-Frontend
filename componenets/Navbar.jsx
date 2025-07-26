@@ -69,7 +69,7 @@ function Navbar() {
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle p-0">
               <div className="w-10 rounded-full border-2 border-amber-400">
-                <img src="/componenets/hacker.png" alt="User profile" className="object-cover" />
+                <img src="https://github.com/Sujit4141/CODELikho-Frontend/blob/main/componenets/hacker.png" alt="User profile" className="object-cover" />
               </div>
             </div>
             <ul tabIndex={0} className="dropdown-content menu shadow bg-gray-700 rounded-box w-52 mt-2">
