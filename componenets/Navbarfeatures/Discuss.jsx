@@ -280,7 +280,6 @@ function Discuss() {
           </div>
         </div>
       )}
-      <Footer/>
      
     </div>
   );
