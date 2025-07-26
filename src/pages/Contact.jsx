@@ -3,7 +3,7 @@ import Navbar from "../../componenets/Navbar";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FiSend, FiTrash2, FiUser } from "react-icons/fi";
 import { RiCustomerService2Line } from "react-icons/ri";
-import Footer from "./Footer";
+
 
 // Sahayak Chatbot Component
 const SahayakChatbot = () => {
@@ -389,7 +389,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }
