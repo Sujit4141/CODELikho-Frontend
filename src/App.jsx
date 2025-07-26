@@ -17,7 +17,7 @@ import StoreGoodies from "../componenets/Navbarfeatures/StoreGoodies";
 import Discuss from "../componenets/Navbarfeatures/Discuss";
 import CourseDetails from "../componenets/Navbarfeatures/CourseDetails";
 import Mypurchased from "../componenets/Navbarfeatures/Mypurchased";
-import Content from "../componenets/Navbarfeatures/CourseContent/content";
+import Content from "../componenets/Navbarfeatures/CourseContent/Content"
 import Alluser from "./pages/Admincontroller/Alluser";
 import Adminregister from "./pages/Admincontroller/Adminregister";
 import Profile from "../componenets/Navbarfeatures/Profile";
