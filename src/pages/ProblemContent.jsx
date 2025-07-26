@@ -177,23 +177,28 @@ function ProblemContent() {
     });
   };
 
-  const handlepremium = async () => {
-    setIsProcessingPayment(true);
-    setPaymentError(null);
+ const handlepremium = async () => {
+  setIsProcessingPayment(true);
+  setPaymentError(null);
 
-    try {
-      // Check premium status again before proceeding
-      const statusResponse = await axiosClient.post("/premium/premiumdetails", {
-        userid: user._id,
-      });
+  try {
+    // 1. Check premium status
+    const statusResponse = await axiosClient.post("/premium/premiumdetails", {
+      userid: user._id,
+    });
 
-      const premiumId = statusResponse.data.id;
-      if (statusResponse.data.isPremium) {
-        setIsPremiumUser(true);
-        setActiveTab("solutions");
-        setIsProcessingPayment(false);
-        return;
-      }
+    const premiumId = statusResponse.data.id;
+
+    if (!premiumId) {
+      throw new Error("Premium ID not returned by server");
+    }
+
+    if (statusResponse.data.isPremium) {
+      setIsPremiumUser(true);
+      setActiveTab("solutions");
+      setIsProcessingPayment(false);
+      return;
+    }
 
       const verifyPayment = async (razorpayResponse) => {
         try {
