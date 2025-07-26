@@ -164,22 +164,32 @@ function Discuss() {
                     <i className="fas fa-comments mr-2" /> Chat in #{activeRoom}
                   </h2>
                   <div className="flex gap-2">
-                    <button
-                      onClick={() => {
-                        setRoomAction("join");
-                        setShowRoomModal(true);
-                      }}
-                      className="bg-cyan-700 hover:bg-cyan-600 px-4 py-2 rounded-lg"
-                    >
-                      <i className="fas fa-sign-in-alt mr-1" /> Join Room
-                    </button>
-                    <button
-                      onClick={clearChat}
-                      className="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-lg"
-                    >
-                      <i className="fas fa-trash mr-1" /> Clear Chat
-                    </button>
-                  </div>
+  <button
+    onClick={() => {
+      setRoomAction("create");
+      setShowRoomModal(true);
+    }}
+    className="bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg"
+  >
+    <i className="fas fa-plus mr-1" /> Create Room
+  </button>
+  <button
+    onClick={() => {
+      setRoomAction("join");
+      setShowRoomModal(true);
+    }}
+    className="bg-cyan-700 hover:bg-cyan-600 px-4 py-2 rounded-lg"
+  >
+    <i className="fas fa-sign-in-alt mr-1" /> Join Room
+  </button>
+  <button
+    onClick={clearChat}
+    className="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-lg"
+  >
+    <i className="fas fa-trash mr-1" /> Clear Chat
+  </button>
+</div>
+
                 </div>
 
                 <div className="flex-1 overflow-y-auto p-4 space-y-4">
