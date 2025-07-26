@@ -168,7 +168,7 @@ function Homepage() {
           </div>
           <div className="relative mt-8 md:mt-0">
             <img 
-              src="./hompage.png"
+              src="/hompage.png"
               alt="Coding" 
               className="w-60 md:w-64 drop-shadow-xl transition-transform duration-500 hover:scale-105" 
               draggable={false} 
