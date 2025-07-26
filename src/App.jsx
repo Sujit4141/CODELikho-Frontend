@@ -10,8 +10,8 @@ import AdminPanel from "./pages/AdminPanel";
 import Addproblem from "./pages/Admincontroller/Addproblem"
 import UpdateProblem from "./pages/Admincontroller/UpdateProblem";
 import ProblemContent from "./pages/ProblemContent"
-import Store from "./pages/Admincontroller/store";
-import StoreManagment from "../componenets/Admin page/StoreManagment";
+import Store from "./pages/Admincontroller/Store";
+import StoreManagment from "../componenets/Adminpage/StoreManagment";
 import Explorecourses from "../componenets/Navbarfeatures/Explorecourses";
 import StoreGoodies from "../componenets/Navbarfeatures/StoreGoodies";
 import Discuss from "../componenets/Navbarfeatures/Discuss";

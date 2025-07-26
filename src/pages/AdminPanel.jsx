@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Navbar from "../../componenets/Navbar";
 import { FiPlus, FiEye, FiEdit, FiSearch, FiTrash2 } from "react-icons/fi";
 import axios from 'axios'; // or your preferred HTTP client
-import Herosection from '../../componenets/Admin page/hero section';
+import Herosection from '../../componenets/Adminpage/hero section';
 import { Link } from 'react-router';
 import Footer from './Footer';
 
