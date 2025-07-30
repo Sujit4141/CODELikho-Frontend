@@ -14,6 +14,7 @@ const loginupSchema = z.object({
   emailId: z.string().email("Invalid Email"),
   password: z.string().min(8, "Password is to weak")
 });
+const [isBackendStarting, setIsBackendStarting] = useState(false);
 
 function Login() {
 
@@ -44,13 +45,33 @@ function toggleEye(){
   }, [isAuthenticated, navigate]);
 
   const onSubmit = (data) => {
-    dispatch(loginUser(data));
+    setIsBackendStarting(true);
+    dispatch(loginUser(data))
+      .unwrap()
+      .catch(() => setIsBackendStarting(false));
   };
   const { themeClasses } = useTheme();
 
   return (
     <div className={`min-h-screen ${themeClasses.bg} ${themeClasses.text} transition-colors duration-300 flex flex-col items-center justify-center p-4`}>
       <ThemeButtons />
+
+         {isBackendStarting && (
+        <div className={`w-full max-w-md mb-6 p-4 rounded-lg ${themeClasses.card} border ${themeClasses.accent.replace('text', 'border')} text-center`}>
+          <p className={`${themeClasses.text} flex items-center justify-center`}>
+            <svg 
+              className="animate-spin h-5 w-5 mr-2" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24"
+            >
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Backend is starting (first time may take ~1 minute). Please wait...
+          </p>
+        </div>
+      )}
       
       <div className={`w-full max-w-md ${themeClasses.card} rounded-xl shadow-2xl overflow-hidden border ${themeClasses.accent.replace('text', 'border')}/30`}>
         <div className="p-8">
