@@ -14,13 +14,14 @@ const loginupSchema = z.object({
   emailId: z.string().email("Invalid Email"),
   password: z.string().min(8, "Password is to weak")
 });
-const [isBackendStarting, setIsBackendStarting] = useState(false);
+
 
 function Login() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user,isAuthenticated, loading, error } = useSelector((state) => state.auth);
+  const [isBackendStarting, setIsBackendStarting] = useState(false);
   
   
   const {
