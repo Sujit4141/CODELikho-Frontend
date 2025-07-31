@@ -79,6 +79,9 @@ function toggleEye(){
           <div className="text-center mb-8">
             <h2 className={`text-3xl font-bold ${themeClasses.accent} mb-2`}>Welcome Back</h2>
             <p className={`${themeClasses.text} opacity-80`}>Login to your account</p>
+              <p className={`mt-2 text-sm ${themeClasses.text} opacity-60`}>
+              First-time users: Server may take ~1 minute to wake up
+            </p>
           </div>
           
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
